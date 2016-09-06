@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		.box{width:400px;height:113px;position:relative;margin:100px auto;border:1px solid #000;overflow:hidden;}
+		.content{width: 400px;height:400px;background: -webkit-repeating-linear-gradient(-45deg,red 0,red 20px,#fff 20px,#fff 40px,blue 40px,blue 60px,#fff 60px,#fff 80px);position:absolute;left:0;top:0;animation:demo 1s linear infinite;}
+		@keyframes demo{
+			from{top:0;}
+			to{top:-113px;}
+		}
+		
+	</style>
+	<script>
+		window.onload=function(){
+			var oS0=document.querySelector('.s0');
+			var oS1=document.querySelector('.s1');
+			var oC1=document.querySelector('.c1');
+			var oC2=document.querySelector('.c2');
+			var oBox=document.querySelector('.box');
+			var oCon=document.querySelector('.content');
+			oS0.innerHTML=oC1.value;
+			oS1.innerHTML=oC2.value;
+			oCon.style.background='-webkit-repeating-linear-gradient(-45deg,'+oC1.value+' 0,'+oC1.value+' 20px,#fff 20px,#fff 40px,'+oC2.value+' 40px,'+oC2.value+' 60px,#fff 60px,#fff 80px)'
+			oC1.onchange=oC2.onchange=function(){
+				oS0.innerHTML=oC1.value;
+				oS1.innerHTML=oC2.value;
+				oCon.style.background='-webkit-repeating-linear-gradient(-45deg,'+oC1.value+' 0,'+oC1.value+' 20px,#fff 20px,#fff 40px,'+oC2.value+' 40px,'+oC2.value+' 60px,#fff 60px,#fff 80px)'
+			};
+			
+			
+			
+		};
+	</script>
+</head>
+<body>
+	<span class="s0"></span>
+	<input type="color" value="#ff00ff" class="c1">
+	<input type="color" value="#000000" class="c2">
+	<span class="s1"></span>
+	<div class="box">
+		<div class="content"></div>
+	</div>
+</body>
+</html>

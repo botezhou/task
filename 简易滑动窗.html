@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;list-style: none;}
+		.box{width: 1000px;margin:100px auto;}
+		.box ul{width: 1000px;}
+		.box li{width: 300px;height: 120px;float:left;border-radius: 10px;overflow: hidden;position:relative;margin-left:20px;box-shadow: 3px 5px 10px #000;}
+		.box li .play{width: 300px;height: 120px;position:absolute;left:0;top:0;background:-webkit-linear-gradient(aqua,yellow);text-align: center;line-height: 120px;font-size: 30px;z-index: 2;transition:1s all ease;text-shadow:2px 6px 5px #303;font-weight: 600;box-shadow:inset 5px 5px 10px #000,5px 5px 10px #000}
+		.box li img{width: 300px;height: 120px;position:absolute;left:0;top:0;}
+        .box li .play:hover{top:-120px;}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul>
+			<li>
+				<div class="play">Fllow</div>
+				<img src="img/1.jpg" alt="">
+			</li>
+			<li>
+				<div class="play">Me</div>
+				<img src="img/2.jpg" alt="">
+			</li>
+			<li>
+				<div class="play">YOU</div>
+				<img src="img/3.jpg" alt="">
+			</li>		
+		</ul>
+	</div>
+</body>
+</html>
