@@ -1,0 +1,19 @@
+html增加了很多新标签
+    有用的：
+        canvas  画布
+        audio   音频
+        video   视频
+video  视频播放器  行内快标签 不兼容  
+      任何播放器(pc端)都是用flash做的
+      移动端不是   因为flash不兼容
+      controls    控制台
+      loop        循环播放
+      autoplay    自动播放
+      MP4视频兼容最好的
+      播放   obj.play();
+      暂停   obj.pause();
+      当前播放时间  obj.currentTime();
+===================================================================================
+地理位置
+  navigator geolocation 必须在服务器环境下
+  .getCurrentPosition(fuSucc,fnFail) 
